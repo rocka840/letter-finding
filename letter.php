@@ -1,17 +1,14 @@
 <?php
 
-if(isset($_GET["word"])){ //asking does this exist
 
-  /*  $countBs=0;
-    for($i=0;$i<strlen($_GET["word"]);$i++){
-        if($_GET["word"][$i]== 'b'){
-            $countBs++;
-        }
+if(isset($_GET['count'])){
+    $string = $_GET['count'];
+
+
+foreach (count_chars($string, 1) as $i => $val) {
+    if (chr($i) == "b") {
+    echo "There were '$val' instance(s) of b in the string." . "<br>";
     }
-    print $countBs;
-    */
-    
-    print substr_count($_GET["word"], "b");
 }
 
-?>
+}
